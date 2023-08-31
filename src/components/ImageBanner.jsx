@@ -30,10 +30,10 @@ export function ImageBanner(props) {
 
   const getCarouselOrDefaultImage = () => {
     if (!arePicturesAvailable()) {
-      return <img src="https://picsum.photos/800" className="show" alt="" />;
+      return <div>Aucune image disponible</div>;
     }
-    return pictures.map((pic, i) => (
-      <img key={pic} src={pic} alt="" className={getClassName(i)}></img>
+    return pictures.map((pic, index) => (
+      <img key={pic} src={pic} alt="" className={getClassName(index)}></img>
     ));
   };
 
