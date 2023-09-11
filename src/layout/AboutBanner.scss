@@ -1,0 +1,24 @@
+@use "../scss/variables.scss" as *;
+
+.aboutbanner {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  padding-inline: 2rem;
+  background-image: url("../assets/IMG2.png");
+  min-height: 140px;
+  margin: auto;
+  border-radius: 2rem;
+  display: grid;
+  place-items: center;
+  color: $color-tertiary;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  &::before {
+    position: absolute;
+    border-radius: 2rem;
+    content: "";
+    inset: 0;
+    opacity: 0.5;
+  }
+}
