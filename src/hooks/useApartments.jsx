@@ -11,7 +11,7 @@ export const useApartments = () => {
     const abortController = new AbortController();
 
     // Récupération des données depuis "db.json" en utilisant le signal du contrôleur d'annulation
-    fetch("db.json", { signal: abortController.signal })
+    fetch("db.json")
       .then((res) => res.json())
       .then((res) => setApartments(res))
       .catch(console.error);
